@@ -3,7 +3,7 @@
 dotnet build amqpnetlite/AutoCreate/QueueSend
 dotnet build amqpnetlite/AutoCreate/QueueReceive
 
-podman run -d --name test-broker -p 5672:5672 -e AMQ_USER=admin -e AMQ_PASSWORD=admin quay.io/artemiscloud/activemq-artemis-broker
+podman run -d --rm --name test-broker -p 5672:5672 -e AMQ_USER=admin -e AMQ_PASSWORD=admin quay.io/artemiscloud/activemq-artemis-broker
 
 sleep 10
 
